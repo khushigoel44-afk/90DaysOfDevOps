@@ -1,0 +1,13 @@
+#**Commands**#
+- **'mkdir Devops'**     // *will create a Folder named Devops*
+- **'touch introFile.txt'**  // *will create a file named introFile.txt*
+- **'vim introFile.txt'**  // *introFile.txt will open in the edit mode (click 'i' to insert text).*
+- **'echo "Hey There" > introFile.txt'** // *Will Overwrite the text of introFile.txt with "Hello There".*
+- **'echo "How are you??" >> introFile.txt'** // *Will include the text "How are you??" to the next line.*
+- **'tee introFile'** // *Takes input and displays the same output on the terminal. (All the text gets overwritten in the introFile.txt).*
+- **'tee -a introFile.txt'** // *Takes input and displays the same output on the terminal. (Starts including the text from next line).*
+- **'cat introFile.txt'** // *Displays the text included within the introFile.txt.*
+- **'head -n 20 introFile.txt'** // *Will Display the top 20 lines from introFile.txt.*
+- **'head introFile.txt'** // *Will display the top 10 lines from introFile.txt by default.*
+- **'tail -n 20 introFile'** // *Will display the bottom 20 lines from introFile.txt.*
+- **'tail introFile.txt'** // *Will display the bottom 10 lines by deafult from introFile.txt.*
