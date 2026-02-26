@@ -134,14 +134,3 @@ Date:   Thu Feb 26 04:51:44 2026 +0000
 
 ---
 
-
-
----
-
-## Hints
-- All you need today are about 8-10 Git commands — Google them, try them, break things
-- Read what `git status` tells you — it's your best friend
-- Use `man git-<command>` or `git <command> --help` to explore
-
----
-
