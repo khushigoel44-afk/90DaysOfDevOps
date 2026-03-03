@@ -135,17 +135,3 @@ It will do Merge Commit
      - In case, after Cherry-pick you realise that you wanted the entire commits merged into the main branch. Then it will be very messy to do it.
 
 ---
-
-## Hints
-- Visualize history: `git log --oneline --graph --all`
-- To intentionally create a merge conflict: edit the **same line** of the **same file** on two branches
-- Stash with a message: `git stash push -m "description"`
-- Cherry-pick needs a commit hash — find it with `git log --oneline`
-
----
-
-## Submission
-1. Add your `day-24-notes.md` to `2026/day-24/`
-2. Update `git-commands.md` with all new commands and commit
-3. Push to your fork
-
