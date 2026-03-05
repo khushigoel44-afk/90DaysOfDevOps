@@ -39,12 +39,15 @@
 - **Identity:** `hostname -I` (or `ip addr show`) — note your IP.
 ```bash
 hostname -I 
-# Gave the IP Address in a single line.
-# 172.31.198.10
+# Gave the private IP Address in a single line.
 ```
 ```bash
 ip addr show 
 # It gives the IP Address along with some additional information.
+```
+```bash
+curl ifconfig.me
+# It gives the IP address given by the ISP to my device. If a request is made to a server than the IP address received by the server is displayed here.
 ```
 - **Reachability:** `ping <target>` — mention latency and packet loss.
 ```bash
@@ -80,7 +83,7 @@ traceroute google.com
 ss -tulpn 
 # It 's listing all the active processes (either TCP or UDP) on the system. 
 # LISTEN : TCP (Transmission Control Protocol)
-# RECONN : UDP (User Datagram Protocol)
+# UNCONN : UDP (User Datagram Protocol)
 ```
 ```bash
 # Active Listening Service and it's port:--
