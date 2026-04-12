@@ -117,6 +117,8 @@ htop
 **Step 3:** Check the top processes that are taking up the memory
 ```bash
 ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 5
+or
+ps aux --sort=-%cpu | head -n 6 // will provide all the columns for the top 6 rows
 ```
 **Why this command?** It shows the top 5 applications that are taking up maximum attention of the CPU.
 
