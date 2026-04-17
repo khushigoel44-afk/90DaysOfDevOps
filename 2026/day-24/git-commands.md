@@ -91,7 +91,6 @@
   - Displays all the commits without any merges. (Basically displays the history in an expanded manner).
 
 - git merge --squash dev
-- git commit -m "<Commit comment>"
   - Will mske the commits consice to increase the readibility.
 
 -git stash
