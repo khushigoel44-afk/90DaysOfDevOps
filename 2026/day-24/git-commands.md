@@ -91,11 +91,10 @@
   - Displays all the commits without any merges. (Basically displays the history in an expanded manner).
 
 - git merge --squash dev
-- git commit -m "<Commit comment>"
   - Will mske the commits consice to increase the readibility.
 
--git stash
+- git stash
   - Will hide the unfinished content of the pwd. Helps in switching the branch, even with incomplete work.
 
--git cherry-pick <commit_ID>
+- git cherry-pick <commit_ID>
   - will merge the commit with <commit_ID> only rather than merging the whole commit history.
