@@ -1,17 +1,21 @@
 **Environment basics**
 ```bash
 uname -a
+# Confirms the Kernel Version
 ```
 ```bash
 cat /etc/os-release
+# Verify OS Version
 ```
 
 **Filesystem sanity**
 ```bash
 mkdir /tmp/runbook-demo
+# Directory Created Successfully
 ```
 ```bash
 cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo
+# Disk is accepting new writes
 ```
 
 **CPU / Memory**
