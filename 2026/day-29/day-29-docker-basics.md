@@ -57,11 +57,14 @@ Research and write short notes on:
 ```bash
 docker run -d -p 80:80 nginx
 // Access in the Browser (DONE)
+// <host's port(used with localhost)>:<container's port>
 ```
 2. Run an **Ubuntu** container in interactive mode — explore it like a mini Linux machine
 ```bash
 docker run -itd ubuntu
-docker exec -itd <Container_id> bash
+docker exec -it <Container_id> bash
+# with -t: only the terminal will be attached and no commands will run then 
+# with -it: the terminal will be attached and the commands will also run
 ```
 3. List all running containers
 ```bash
@@ -83,8 +86,8 @@ docker stop <Container_id> && docker rm <Container_id>
 ```bash
 docker run -d nginx
 # -d (Detached Mode)
-# With: All the Background processing is not displayed. Only the Container Id is displayed and the screen doen't get locked and continues with the next commands. 
-# Without: All the background processing is also displayed. Ctrl+C is needed very often.
+# with: The active/ working process will be pushed to the background such that the terminal is not displayed. 
+# Without: All the background processing is also displayed. The terminal is displayed. Ctrl+C is needed very often.
 ```
 2. Give a container a custom **name**
 ```bash
