@@ -1,21 +1,5 @@
 # Day 30 – Docker Images & Container Lifecycle
 
-## Task
-Today's goal is to **understand how images and containers actually work**.
-
-You will:
-- Learn the relationship between images and containers
-- Understand image layers and caching
-- Master the full container lifecycle
-
----
-
-## Expected Output
-- A markdown file: `day-30-images.md`
-- Screenshots of key commands
-
----
-
 ## Challenge Tasks
 
 ### Task 1: Docker Images
@@ -36,14 +20,14 @@ docker images ls # will list all the images available on the system
 ```
 3. Compare `ubuntu` vs `alpine` — why is one much smaller?
 ```bash
-Out of the two - "alpine" is much smaller occupying only 13.1MB in contrast to ubuntu occupying 160MB space
+Out of the two - "alpine" is much smaller occupying only 13.1MB on the Disk in contrast to ubuntu occupying 160MB of the Disk space.
 ```
 4. Inspect an image — what information can you see?
 ```bash
 It provides the following info:--
  - image id
- - disk usage (compressed size when pulled from dockerhub)
- - content size (size when the image is unpacked and is in use)
+ - disk usage (The space taken up by the image on the physical hard disk)
+ - content size (The space taken up by all the files of the image)
  - time of creation
  - status - running or not
  - ports - port on which it is running
@@ -53,7 +37,7 @@ It provides the following info:--
 ```bash
 docker rmi <image_id> # No container attached 
 docker rm <container_id> # Container attached 
-docker remi <image_id>
+docker rmi <image_id>
 
 ```
 
@@ -100,6 +84,7 @@ docker start <container_id>
 3. **Pause** it and check status
 ```bash
 docker pause <container_id> 
+docker ps
 # (Paused) is displayed under the Status section
 ```
 4. **Unpause** it
