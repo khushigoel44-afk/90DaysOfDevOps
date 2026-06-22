@@ -3,7 +3,7 @@
 ```bash
 mkdir my-first-image
 ```
-2. Inside it, create a `Dockerfile` that: (DONE)
+2. Inside it, create a `Dockerfile` that: 
    - Uses `ubuntu` as the base image
    - Installs `curl`
    - Sets a default command to print `"Hello from my custom image!"`
@@ -13,7 +13,9 @@ docker build -t my-ubuntu:v1 .
 ```
 4. Run a container from your image
 ```bash
-docker run my-ubuntu:v1 
+docker run -it my-ubuntu:v1 
+docker run -it my-ubuntu:v1 bash  # open the bash terminal 
+curl --version # installed version of curl is displayed here 
 ```
 
 **Verify:** The message prints on `docker run` (YES)
@@ -28,6 +30,13 @@ docker run my-ubuntu:v1
 1. Create an image with `CMD ["echo", "hello"]` — run it, then run it with a custom command. What happens?
 ```bash
 The CMD is default commands that gets overriden by the run command. Whatever is written in run command will run and will override that of CMD.
+This happens during the runtime, as is given below:
+```
+```bash
+docker run -it myapp # this will run what is present in the CMD
+docker run -it myapp run "My docker app" # this will display what is given in the "run" - My docker app
+
+```
 ```
 2. Create an image with `ENTRYPOINT ["echo"]` — run it, then run it with additional arguments. What happens?
 ```bash
