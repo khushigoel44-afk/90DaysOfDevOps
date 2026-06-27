@@ -147,19 +147,3 @@ The size is exactly the same as we have used the exact same Distroless image in 
 - Push: `docker push username/repo:tag`
 - Non-root user: `RUN adduser` + `USER`
 
----
-
-## Submission
-1. Add your Dockerfiles and `day-35-multistage-hub.md` to `2026/day-35/`
-2. Include the link to your Docker Hub repo
-3. Commit and push to your fork
-
----
-
-## Learn in Public
-Share your before/after image sizes on LinkedIn — the difference is always impressive.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
