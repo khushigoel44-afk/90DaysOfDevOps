@@ -1,0 +1,21 @@
+name: pr-check
+
+on:
+    schedule:
+        - cron: '0 9 * * 1'
+    workflow_dispatch:
+        inputs:
+            environment:
+                description: Select the environment
+                required: true
+                type: choice
+                default: 'staging'
+                options: [staging, production]
+
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR check running message
+        run: echo "PR check running for branch $github.ref_name"

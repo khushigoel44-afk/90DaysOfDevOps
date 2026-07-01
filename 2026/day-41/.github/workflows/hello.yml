@@ -1,0 +1,33 @@
+name: hello
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    greet:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout the code
+              uses: actions/checkout@v4
+
+            - name: Print message
+              run: echo "Hello from github actions!"
+
+            - name: Current Date
+              run: date
+
+            - name: Current Time
+              run: echo "CURRENT_TIME=$(date +'%H:%M:%S')" >> $GITHUB_ENV
+
+            - name: Current Time
+              run: echo "${{ env.CURRENT_TIME }}"
+
+            - name: Branch that triggered the run
+              run: echo "$github.ref_name"
+
+            - name: List all the files in the repo
+              run: ls -la
+
+            - name: Name of the runner
+              run: echo "${{ runner.os }}"  

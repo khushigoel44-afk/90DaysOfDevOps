@@ -1,0 +1,34 @@
+name: matrix
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+
+jobs:
+    python-versions:
+        runs-on: ${{ matrix.os }}
+        strategy:
+            fail-fast: false
+            matrix: 
+                os: [ubuntu-latest, windows-latest]
+                python-version: [3.11, 3.12, 3.13]
+                exclude: 
+                    - os: windows-latest
+                      python-version: '3.12'
+
+        steps:
+            - name: Print the current branch name
+              run: echo "The curent branch is ${{ github.ref_name }}"
+
+            - name: Checkout the code
+              uses: actions/checkout@v4
+
+            - name: Use matrix strategy to setup python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "${{ matrix.python-version }}"
+            
+            - name: Print the final msg
+              run: echo "Currently running on the python version ${{ matrix.python-version }}"
